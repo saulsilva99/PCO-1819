@@ -1,0 +1,18 @@
+Explique que erros existem no código cliente quando este está definido:
+1. num método da própria classe SomeClass;
+
+-O metodo "void setA(int a)" devia estar definido como public?
+(Não tenho a certeza)
+
+2. numa classe do pacote pco;
+
+Não é possível aceder aos metódos: getB() e setB(); da class "SomeClass",
+pois estão como private. Isto é, uma class diferente consegue aceder a tudo o que 
+não está como private.
+
+3. numa classe de um pacote diferente de pco
+
+- Não estar declarado um pacote para onde é desejado aceder a essa class.
+no exemplo é declarado "package pco;", mas caso seja necessário aceder por outro 
+pacote, então "package pco2;" por exemplo.
+
