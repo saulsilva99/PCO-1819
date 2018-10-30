@@ -10,21 +10,32 @@ public class Palindrome {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner inputFromFile = new Scanner(new File("src/exercicio41/o_meu_fich.txt"));
-		while(inputFromFile.hasNext()) {
-			System.out.println(inputFromFile.next());
+		int numStrings = 0;
+		int palindromes = 0;
+		while (inputFromFile.hasNext()) {
+			String s = inputFromFile.next();
+			numStrings +=1;
+			if(isPalindrome(s)) {
+				palindromes +=1;
+			}
 		}
-		System.out.println("asdasdas");
-		isPalindrome("abc");
+		System.out.println("Strings = "+numStrings);
+		System.out.println("Palindromes = "+palindromes);
+		
 	}
+
 	public static boolean isPalindrome(String s) {
-		String[] word = s.split("");
-		String[] wordInverted = new String[word.length];
-		for(int i = word.length-1; i > 0; i--) {
-			wordInverted[i] = word[i];
-			System.out.println(word);
-			System.out.println(wordInverted.toString());
+		return s.equals(wordReverse(s));
+		
+	}
+
+	public static String wordReverse(String s) {
+		StringBuilder word = new StringBuilder(s);
+		return word.reverse().toString();
+		/*for(int i = reversed.length(); i > 1; i--) {
+			reversed.append(s.charAt(i));
 		}
-		return true;
+		System.out.println(s);*/
 	}
 
 }
