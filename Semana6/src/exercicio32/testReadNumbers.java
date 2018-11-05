@@ -6,6 +6,7 @@ public class testReadNumbers {
 		// TODO Auto-generated method stub
 		ReadNumbers r = new ReadNumbers();
 		r.number();
+		system.out.print("ola");
 	}
 
 }
