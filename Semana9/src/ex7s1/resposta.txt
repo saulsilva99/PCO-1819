@@ -1,0 +1,20 @@
+Resposta ao exercício
+
+B1:
+Primeiro problema é que não existe um constructor na class A sem parametro.
+Logo, é necessário criar um construtor desse género.
+
+B2:
+value não é protected nem public é private. Logo o value só é referente a class A.
+
+B3:
+@Override é para sobrepor um metódo que tem o mesmo nome e assinatura. Neste caso, 
+como não existe nenhum metodo na class A, não dá para fazer @Override e dá erro.
+
+B4:
+@Override seria possível caso na class acima não tivesse um método com final. Deste modo, o final
+impede que as subclasses (B4) consigam fazer Override.
+
+B5:
+Primeiro Erro, a subclass não deve criar dois constructores da class super.
+Segundao Erro, não é possível uma subclasses ter dois superclasses
